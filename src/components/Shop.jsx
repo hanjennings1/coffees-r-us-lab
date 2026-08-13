@@ -34,7 +34,10 @@ function Shop() {
       onSearchChange={handleSearchChange} 
       onLocationToggle={handleLocationToggle} 
     />
-    <ProductList />
+    <ProductList 
+      searchTerm={searchTerm} 
+      selectedLocations={selectedLocations} 
+    />
   </div>
 )
 }
