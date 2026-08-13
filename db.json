@@ -1,88 +1,96 @@
 {
   "coffee": [
     {
-      "id": 1,
+      "id": "1",
       "name": "Tarrazú",
       "description": "Bright acidity with notes of citrus and brown sugar",
       "origin": "Costa Rica",
-      "price": 14.50
+      "price": 14.5
     },
     {
-      "id": 2,
+      "id": "2",
       "name": "Tres Ríos",
       "description": "Balanced medium roast with hints of chocolate and orange",
       "origin": "Costa Rica",
       "price": 13.75
     },
     {
-      "id": 3,
+      "id": "3",
       "name": "West Valley",
       "description": "Light roast with floral aroma and honey sweetness",
       "origin": "Costa Rica",
-      "price": 15.00
+      "price": 15
     },
     {
-      "id": 4,
+      "id": "4",
       "name": "Marcala",
       "description": "Medium roast, caramel sweetness with a smooth, nutty finish",
       "origin": "Honduras",
-      "price": 12.50
+      "price": 12.5
     },
     {
-      "id": 5,
+      "id": "5",
       "name": "Copán",
       "description": "Dark roast with notes of cocoa and toasted almond",
       "origin": "Honduras",
-      "price": 12.00
+      "price": 12
     },
     {
-      "id": 6,
+      "id": "6",
       "name": "Comayagua",
       "description": "Medium roast with red apple acidity and a clean finish",
       "origin": "Honduras",
-      "price": 13.00
+      "price": 13
     },
     {
-      "id": 7,
+      "id": "7",
       "name": "Cerrado Mineiro",
       "description": "Full-bodied dark roast with notes of milk chocolate and hazelnut",
       "origin": "Brazil",
-      "price": 11.50
+      "price": 11.5
     },
     {
-      "id": 8,
+      "id": "8",
       "name": "Sul de Minas",
       "description": "Medium roast, nutty with a mild sweetness and low acidity",
       "origin": "Brazil",
-      "price": 10.50
+      "price": 10.5
     },
     {
-      "id": 9,
+      "id": "9",
       "name": "Mogiana",
       "description": "Smooth dark roast with caramel and dried fruit notes",
       "origin": "Brazil",
       "price": 12.25
     },
     {
-      "id": 10,
+      "id": "10",
       "name": "Huila",
       "description": "Medium roast with bright citrus acidity and a floral finish",
       "origin": "Colombia",
-      "price": 14.00
+      "price": 14
     },
     {
-      "id": 11,
+      "id": "11",
       "name": "Nariño",
       "description": "Light roast, sweet and fruity with notes of berries and caramel",
       "origin": "Colombia",
-      "price": 15.50
+      "price": 15.5
     },
     {
-      "id": 12,
+      "id": "12",
       "name": "Tolima",
       "description": "Medium roast with balanced acidity and notes of stone fruit",
       "origin": "Colombia",
-      "price": 13.50
+      "price": 13.5
+    },
+    {
+      "name": "Fazenda Santa Inês",
+      "description": "Medium roast with notes of toasted nut and dark chocolate, low acidity",
+      "origin": "Brazil",
+      "price": "11.75",
+      "id": "jHA5GevJvmE"
     }
-  ]
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }
