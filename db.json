@@ -1,0 +1,88 @@
+{
+  "coffee": [
+    {
+      "id": 1,
+      "description": "Medium Roast, nutty flavor",
+      "name": "Vanilla Bean",
+      "origin": "Colombia",
+      "price": 10.00
+    },
+    {
+      "id": 2,
+      "description": "Dark Roast, rich flavor",
+      "name": "House Blend",
+      "origin": "Vietnam",
+      "price": 12.00
+    },
+    {
+      "id": 3,
+      "description": "Light Roast, floral and citrusy",
+      "name": "Ethiopian Yirgacheffe",
+      "origin": "Ethiopia",
+      "price": 14.50
+    },
+    {
+      "id": 4,
+      "description": "Medium Roast, chocolatey and smooth",
+      "name": "Sumatra Mandheling",
+      "origin": "Indonesia",
+      "price": 13.00
+    },
+    {
+      "id": 5,
+      "description": "Dark Roast, bold and smoky",
+      "name": "French Roast",
+      "origin": "Brazil",
+      "price": 11.50
+    },
+    {
+      "id": 6,
+      "description": "Medium Roast, bright and fruity",
+      "name": "Kenya AA",
+      "origin": "Kenya",
+      "price": 15.00
+    },
+    {
+      "id": 7,
+      "description": "Light Roast, sweet and winey",
+      "name": "Costa Rican Tarrazu",
+      "origin": "Costa Rica",
+      "price": 13.75
+    },
+    {
+      "id": 8,
+      "description": "Dark Roast, earthy and full-bodied",
+      "name": "Sumatra Dark",
+      "origin": "Indonesia",
+      "price": 12.50
+    },
+    {
+      "id": 9,
+      "description": "Medium Roast, caramel and nutty notes",
+      "name": "Guatemalan Antigua",
+      "origin": "Guatemala",
+      "price": 14.00
+    },
+    {
+      "id": 10,
+      "description": "Light Roast, delicate and tea-like",
+      "name": "Panama Geisha",
+      "origin": "Panama",
+      "price": 18.00
+    },
+    {
+      "id": 11,
+      "description": "Dark Roast, spicy and robust",
+      "name": "Sumatra Lintong",
+      "origin": "Indonesia",
+      "price": 12.25
+    },
+    {
+      "id": 12,
+      "description": "Medium Roast, balanced and sweet",
+      "name": "Honduran Marcala",
+      "origin": "Honduras",
+      "price": 11.00
+    }
+  ]
+}
