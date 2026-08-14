@@ -1,3 +1,8 @@
 .shop-page {
-  display: flex; /* Sidebar and ProductList sit side-by-side instead of stacking */
+  display: flex;
 }
+
+.shop-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; 

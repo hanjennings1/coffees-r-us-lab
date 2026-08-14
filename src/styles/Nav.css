@@ -13,3 +13,10 @@ nav a {
   text-decoration: none;
   font-size: 1.1rem;
 }
+
+/* NavLink automatically applies this class name when its route matches the current URL */
+nav a.active {
+  background-color: rgba(255, 255, 255, 0.15); /* white at 15% opacity — creates the "slightly transparent box" effect */
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+}

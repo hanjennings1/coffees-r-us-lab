@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom' // lets us redirect programmatically after success
 import ProductForm from './ProductForm'
+import '../styles/Admin.css'
 
 function Admin() {
   // navigate is a function we can call to change routes in code (not just via <Link> clicks)
@@ -33,8 +34,8 @@ function Admin() {
   }
 
   return (
-    <div>
-      <h1>Admin Portal</h1>
+    <div className="admin-page">
+      <h1>Add a Product</h1>
 
       {/* && short-circuit: only renders the <p> when successMessage is true.
           If false, the whole expression evaluates to false, and React renders nothing. */}

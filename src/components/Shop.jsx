@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Sidebar from './Sidebar'
 import ProductList from './ProductList'
-import '../styles/Shop.css' // side-by-side layout for Sidebar + ProductList
+import '../styles/Shop.css' // side-by-side layout for Sidebar + ProductList, plus the page title
 
 function Shop() {
   // Text currently typed in the search box — lifted up here since 
@@ -28,17 +28,23 @@ function Shop() {
   }
 
   return (
-    // shop-page: flex container so Sidebar and ProductList sit side-by-side, matching the mockup
-    <div className="shop-page">
-      <Sidebar 
-        searchTerm={searchTerm} 
-        selectedLocations={selectedLocations} 
-        onSearchChange={handleSearchChange} 
-        onLocationToggle={handleLocationToggle} 
-      />
-      {/* ProductList receives the same filter state, so it can decide which products to actually show */}
-      <ProductList searchTerm={searchTerm} selectedLocations={selectedLocations} />
-    </div>
+    // <>...</> is a React Fragment — groups the heading and shop-page div together
+    // without adding an extra wrapping <div> to the actual HTML output
+    <>
+      <h1 className="shop-title">Shop</h1>
+
+      {/* shop-page: flex container so Sidebar and ProductList sit side-by-side, matching the mockup */}
+      <div className="shop-page">
+        <Sidebar 
+          searchTerm={searchTerm} 
+          selectedLocations={selectedLocations} 
+          onSearchChange={handleSearchChange} 
+          onLocationToggle={handleLocationToggle} 
+        />
+        {/* ProductList receives the same filter state, so it can decide which products to actually show */}
+        <ProductList searchTerm={searchTerm} selectedLocations={selectedLocations} />
+      </div>
+    </>
   )
 }
 

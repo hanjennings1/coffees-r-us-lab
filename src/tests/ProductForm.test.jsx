@@ -29,7 +29,7 @@ describe('ProductForm', () => {
       name: 'Mock Coffee',
       description: 'A mock roast for testing',
       origin: 'Mockland',
-      price: '9.99' // stays a string — the input's value is always a string, even for type="number"
-    })
+      price: 9.99 // now converted to a real number by ProductForm's handleSubmit
   })
+})
 })

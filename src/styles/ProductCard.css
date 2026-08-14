@@ -2,9 +2,18 @@
   background-color: var(--color-cream);
   border-radius: 12px;
   padding: 1.5rem;
-  text-decoration: none;      /* removes the underline Link adds by default */
+  text-decoration: none;
   color: var(--color-darkest);
-  display: block;              /* Link defaults to inline, this makes it behave like a normal block container */
+  display: flex;
+  flex-direction: column;   /* stacks content vertically, needed for consistent height alignment */
+  height: 100%;              /* fills the full height of its grid cell, so short/long cards line up */
+  transition: transform 0.15s ease, box-shadow 0.15s ease; /* smooths out the hover effect below */
+}
+
+/* Hover effect: slight lift + shadow, signals the card is clickable */
+.product-card:hover {
+  transform: translateY(-4px);              /* moves the card up slightly */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* soft shadow underneath, reinforcing the "lift" */
 }
 
 .product-card h3 {
@@ -14,4 +23,18 @@
 .product-card p {
   margin-bottom: 0.25rem;
   font-size: 0.9rem;
+}
+
+/* Description specifically gets to grow and push the price down, 
+   so price always lands at the same spot regardless of description length */
+.product-card .description {
+  flex: 1;
+}
+
+/* Price gets its own distinct styling — bigger, bold, and a different color to stand out */
+.product-card .price {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--color-dark);
+  margin-top: 0.5rem;
 }

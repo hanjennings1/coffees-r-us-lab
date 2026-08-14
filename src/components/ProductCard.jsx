@@ -7,9 +7,9 @@ function ProductCard({ product }) {
     // Template literal (`${}`) inserts this specific product's id into the URL dynamically
     <Link to={`/product/${product.id}`} className="product-card">
       <h3>{product.name}</h3>
-      <p>{product.description}</p>
+      <p className="description">{product.description}</p>
       <p>{product.origin}</p>
-      <p>${product.price}</p>
+      <p className="price">${Number(product.price).toFixed(2)}</p>
     </Link>
   )
 }
