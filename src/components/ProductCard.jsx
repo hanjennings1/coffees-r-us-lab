@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom' // enables client-side navigation to a specific product
+import '../styles/ProductCard.css'
 
 function ProductCard({ product }) {
   return (

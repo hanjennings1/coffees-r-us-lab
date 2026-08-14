@@ -1,0 +1,3 @@
+.shop-page {
+  display: flex; /* Sidebar and ProductList sit side-by-side instead of stacking */
+}

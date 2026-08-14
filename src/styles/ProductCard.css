@@ -1,0 +1,17 @@
+.product-card {
+  background-color: var(--color-cream);
+  border-radius: 12px;
+  padding: 1.5rem;
+  text-decoration: none;      /* removes the underline Link adds by default */
+  color: var(--color-darkest);
+  display: block;              /* Link defaults to inline, this makes it behave like a normal block container */
+}
+
+.product-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  margin-bottom: 0.25rem;
+  font-size: 0.9rem;
+}

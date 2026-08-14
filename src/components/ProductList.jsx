@@ -1,5 +1,6 @@
 import ProductCard from './ProductCard'
 import useFetch from '../hooks/useFetch' // custom hook replaces manual useState + useEffect + fetch
+import '../styles/ProductList.css'
 
 function ProductList({ searchTerm, selectedLocations }) {
   // useFetch returns the array of products directly, or null while still loading
