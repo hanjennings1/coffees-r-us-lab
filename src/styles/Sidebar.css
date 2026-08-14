@@ -1,0 +1,22 @@
+.sidebar {
+  background-color: var(--color-light);
+  padding: 1.5rem;
+  width: 200px;              /* fixed width sidebar, matching the mockup's proportions */
+  display: flex;
+  flex-direction: column;    /* stacks search box and checkboxes vertically */
+  gap: 1rem;                 /* consistent spacing between each item */
+}
+
+.sidebar input[type="text"] {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;      /* very high number = fully rounded pill shape */
+  border: none;
+  font-size: 1rem;
+}
+
+.sidebar label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;                /* space between checkbox and its label text */
+  color: var(--color-darkest);
+}

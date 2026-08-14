@@ -1,0 +1,15 @@
+/* The nav bar itself: dark brown background, spread links across the width */
+nav {
+  background-color: var(--color-dark);
+  display: flex;                    /* lays out children (links) in a row instead of stacked */
+  justify-content: space-between;   /* pushes Home to the left, Admin Portal to the right, Shop centered */
+  align-items: center;              /* vertically centers the links within the bar */
+  padding: 1rem 2rem;
+}
+
+/* Remove default link styling (blue/purple color, underline) so we can style it ourselves */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+}

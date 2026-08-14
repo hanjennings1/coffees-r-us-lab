@@ -1,5 +1,12 @@
+import '../styles/Home.css'
+
 function Home() {
-  return <h1>Home Page</h1>
+  return (
+    <div className="home-hero">
+      <h1>Coffee R Us</h1>
+      <p className="tagline">the go-to store for all your coffee needs</p>
+    </div>
+  )
 }
 
 export default Home
