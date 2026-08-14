@@ -25,10 +25,12 @@ function ProductForm({ initialData, onSubmit }) {
   }
 
   // Called when the form is submitted — prevents the default page reload,
-  // then hands the finished data up to whichever parent rendered this form
+  // hands the finished data up to whichever parent rendered this form,
+  // then resets its own fields back to empty for the next entry
   function handleSubmit(event) {
     event.preventDefault()
     onSubmit(formData)
+    setFormData({ name: '', description: '', origin: '', price: '' }) // reset fields after submit
   }
 
   return (
