@@ -1,26 +1,20 @@
-import { useState, useEffect } from 'react'
-import { useParams, useNavigate } from 'react-router-dom' // useParams reads the :id from the URL
+import { useState } from 'react'
+import { useParams, useNavigate } from 'react-router-dom'
 import ProductForm from './ProductForm'
+import useFetch from '../hooks/useFetch' // custom hook replaces manual useState + useEffect + fetch
 
 function ProductDetail() {
-  // useParams() returns an object matching your route's dynamic segments.
-  // Since your route is "/product/:id", this gives you { id: "5" } (as a string!)
+  // useParams() returns { id: "5" } based on the current URL, matching /product/:id
   const { id } = useParams()
 
-  const navigate = useNavigate() // for redirecting after a successful edit
+  const navigate = useNavigate()
 
-  // Holds the one specific product being viewed/edited. Starts null — nothing loaded yet.
-  const [product, setProduct] = useState(null)
+  // useFetch handles the GET request for this one specific product.
+  // Returns null while loading, then the product object once fetched.
+  const product = useFetch(`http://localhost:3001/coffee/${id}`)
 
   // Tracks whether to show the "Product updated!" message
   const [successMessage, setSuccessMessage] = useState(false)
-
-  useEffect(() => {
-    // GET request for ONE product — json-server supports fetching by id like this
-    fetch(`http://localhost:3001/coffee/${id}`)
-      .then(response => response.json())
-      .then(data => setProduct(data))
-  }, [id]) // re-run this effect if `id` ever changes (e.g., navigating from one product straight to another)
 
   // Called by ProductForm once the user submits the edited values
   function handleUpdateProduct(formData) {
@@ -53,7 +47,6 @@ function ProductDetail() {
     <div>
       <h1>Edit Product</h1>
       {successMessage && <p>Product updated successfully!</p>}
-      {/* initialData passed this time — ProductForm pre-fills all 4 fields */}
       <ProductForm initialData={product} onSubmit={handleUpdateProduct} />
     </div>
   )
