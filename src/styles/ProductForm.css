@@ -1,0 +1,38 @@
+.product-form {
+  max-width: 400px;
+  margin: 2rem auto;         /* centers the form horizontally, with spacing above/below */
+  padding: 2rem;
+  background-color: var(--color-light);
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;    /* stacks each label/input vertically */
+  gap: 1rem;
+}
+
+.product-form label {
+  display: flex;
+  flex-direction: column;    /* label text sits above its input, not beside it */
+  font-weight: bold;
+  gap: 0.25rem;
+}
+
+.product-form input {
+  padding: 0.5rem;
+  border: 1px solid var(--color-dark);
+  border-radius: 4px;
+  font-weight: normal;       /* inputs shouldn't inherit the bold from their parent label */
+}
+
+.product-form button {
+  background-color: var(--color-dark);
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;           /* shows a pointer/hand cursor on hover, signaling it's clickable */
+}
+
+.product-form button:hover {
+  background-color: var(--color-darkest); /* slightly darker on hover, gives visual feedback */
+}

@@ -1,0 +1,8 @@
+.shop-page {
+  display: flex;
+}
+
+.shop-title {
+  text-align: center;
+  margin-top: 2rem;
+  margin-bottom: 1rem; 

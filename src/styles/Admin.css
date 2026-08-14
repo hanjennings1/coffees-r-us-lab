@@ -1,0 +1,4 @@
+.admin-page h1 {
+  text-align: center;
+  margin-top: 2rem; /* pushes the heading down, away from the nav bar */
+}

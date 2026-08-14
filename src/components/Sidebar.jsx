@@ -1,3 +1,5 @@
+import '../styles/Sidebar.css'
+
 function Sidebar({ searchTerm, selectedLocations, onSearchChange, onLocationToggle }) {
   return (
     <div className="sidebar">

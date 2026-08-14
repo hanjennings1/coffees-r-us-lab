@@ -1,0 +1,7 @@
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal-width columns, matching the mockup */
+  gap: 1.5rem;                            /* spacing between cards, both horizontal and vertical */
+  padding: 2rem;
+  flex: 1;                                 /* lets this take up remaining space next to the sidebar */
+}

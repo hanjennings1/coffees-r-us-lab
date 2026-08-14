@@ -23,7 +23,7 @@ describe('App routing', () => {
     const user = userEvent.setup()
 
     // Confirm we start on the Home page
-    expect(screen.getByText('Home Page')).toBeInTheDocument()
+    expect(screen.getByText('Coffee R Us')).toBeInTheDocument()
 
     // Click the "Shop" link — getByRole targets the <a> element specifically, 
     // avoiding the ambiguous match with Shop.jsx's <h1>Shop</h1>
