@@ -8,7 +8,7 @@ function ProductCard({ product }) {
     <Link to={`/product/${product.id}`} className="product-card">
       <h3>{product.name}</h3>
       <p className="description">{product.description}</p>
-      <p>{product.origin}</p>
+      <p className="origin">{product.origin}</p>
       <p className="price">${Number(product.price).toFixed(2)}</p>
     </Link>
   )

@@ -38,3 +38,10 @@
   color: var(--color-dark);
   margin-top: 0.5rem;
 }
+
+.product-card .origin {
+  font-style: italic;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+
+}

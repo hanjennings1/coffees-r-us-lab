@@ -1,16 +1,59 @@
-# React + Vite
+# Coffees-R-Us — Admin Portal
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based single-page application built as a personal project showcase, simulating an administrator portal for a coffee e-commerce site. Built with React, React Router, and a simulated backend via json-server.
 
-Currently, two official plugins are available:
+![Coffees-R-Us Screenshot](./public/coffees-r-us-lab-screenshot.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Features
 
-## React Compiler
+- **Home page** — landing page introducing the site
+- **Shop page** — browsable grid of all products, with dynamic search and location-based filtering
+- **Admin Portal** — form to add new products
+- **Product Detail page** — view, edit, and delete individual products
+- **Full CRUD** — Create, Read, Update, and Delete products via a simulated REST API (json-server)
+- **Client-side routing** — 4 routes with persistent navigation
+- **Custom hook** — `useFetch` for reusable data fetching logic
+- **Responsive, styled UI** matching the original design mockup
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Tech Stack
 
-## Expanding the ESLint configuration
+- React (Vite)
+- React Router
+- json-server (simulated backend)
+- Vitest + React Testing Library (testing)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Getting Started
+
+1. Clone the repo and install dependencies:
+```bash
+   npm install
+```
+
+2. Start the simulated backend (in one terminal):
+```bash
+   npx json-server db.json --port 3001
+```
+
+3. Start the development server (in a second terminal):
+```bash
+   npm run dev
+```
+
+4. Open the local URL shown in your terminal (typically `http://localhost:5173`)
+
+## Running Tests
+
+```bash
+npm test
+```
+
+## Project Structure
+
+```
+src/
+├── components/   # All React components
+├── hooks/        # Custom hooks (useFetch)
+├── styles/       # CSS files, one per component
+├── tests/        # Vitest + React Testing Library test suites
+db.json           # Simulated backend data
+```
