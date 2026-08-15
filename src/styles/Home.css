@@ -9,17 +9,20 @@
 }
 
 .home-hero h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: var(--color-darkest);
+  letter-spacing: 0.13em;
+  font-weight: 900;
 }
 
 .home-hero p {
   font-size: 1.2rem;
-  color: white; /* matches the mockup's lighter tagline text against the brown background */
+  color: white; 
   margin-top: 0.5rem;
 }
 
 .home-hero .tagline {
-  font-variant: small-caps; /* renders lowercase letters as smaller uppercase letters */
-  letter-spacing: 0.05em;   /* slight spacing often pairs well with small-caps for readability */
+  font-variant: small-caps; 
+  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
 }
