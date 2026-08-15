@@ -90,13 +90,6 @@
       "origin": "Brazil",
       "price": "11.75",
       "id": "jHA5GevJvmE"
-    },
-    {
-      "name": "El Cielito",
-      "description": "Bright medium roast with notes of green apple and honey",
-      "origin": "Honduras",
-      "price": "12.75",
-      "id": "4LlfMImiI64"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

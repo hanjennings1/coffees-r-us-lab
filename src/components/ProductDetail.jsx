@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useParams, useNavigate } from 'react-router-dom'
 import ProductForm from './ProductForm'
-import useFetch from '../hooks/useFetch' // custom hook replaces manual useState + useEffect + fetch
+import useFetch from '../hooks/useFetch'
+import '../styles/ProductDetail.css' // styles for the delete button
 
 function ProductDetail() {
   // useParams() returns { id: "5" } based on the current URL, matching /product/:id
@@ -18,7 +19,6 @@ function ProductDetail() {
 
   // Called by ProductForm once the user submits the edited values
   function handleUpdateProduct(formData) {
-    // PATCH request: updates only the fields provided, for this specific product's id
     fetch(`http://localhost:3001/coffee/${id}`, {
       method: 'PATCH',
       headers: {
@@ -37,17 +37,39 @@ function ProductDetail() {
       })
   }
 
+  // DELETE request: removes this specific product from json-server permanently
+  function handleDeleteProduct() {
+    // window.confirm shows a simple browser popup asking the user to confirm —
+    // prevents accidental deletion from a misclick
+    const confirmed = window.confirm('Are you sure you want to delete this product?')
+
+    if (!confirmed) {
+      return // user clicked "Cancel" — stop here, do nothing
+    }
+
+    fetch(`http://localhost:3001/coffee/${id}`, {
+      method: 'DELETE' // no headers/body needed — DELETE just needs the URL to know what to remove
+    })
+      .then(() => {
+        console.log('Product deleted')
+        navigate('/shop') // immediately redirect after deleting, no need to show a form anymore
+      })
+  }
+
   // Guard clause: while the fetch is still in progress, product is still null.
-  // Without this check, ProductForm would try to read properties off of null and crash.
   if (!product) {
     return <p>Loading...</p>
   }
 
   return (
-    <div>
+    <div className="product-detail-page">
       <h1>Edit Product</h1>
       {successMessage && <p>Product updated successfully!</p>}
       <ProductForm initialData={product} onSubmit={handleUpdateProduct} />
+
+      <button onClick={handleDeleteProduct} className="delete-button">
+        Delete Product
+      </button>
     </div>
   )
 }
